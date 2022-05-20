@@ -12,7 +12,7 @@ def load_model():
     return order_model
 
 def run(model):
-    data = np.load("./data/train.csv")
+    data = np.load("./data/train.npz")
     X_test = data['arr_0']
 
     result = {"data": model.predict(X_test)}
